@@ -20,13 +20,13 @@ public class Message implements Serializable {
     private String messageText;
     
     @ManyToOne
-    @JoinColumn(name="idBoat")
-    @JsonIgnoreProperties({"message", "client", "reservations"})
+    @JoinColumn(name="id")
+    @JsonIgnoreProperties({"messages", "reservations"})
     private Boat boat;
     
     @ManyToOne
-    @JoinColumn(name = "idClient")
-    @JsonIgnoreProperties({"message", "client", "reservations"})
+    @JoinColumn(name = "clientId")
+    @JsonIgnoreProperties({"messages", "reservations"})
     private Client client;
 
     public Integer getIdMessage() {
