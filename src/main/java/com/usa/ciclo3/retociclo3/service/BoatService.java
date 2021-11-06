@@ -46,7 +46,9 @@ public class BoatService {
                 if(boat.getBrand()!=null){
                     e.get().setBrand(boat.getBrand()); ;
                 }
-                
+                if (boat.getYear()!=null){
+                    e.get().setYear(boat.getYear());
+                }
                 if(boat.getDescription()!=null){
                     e.get().setDescription(boat.getDescription());
                 }
